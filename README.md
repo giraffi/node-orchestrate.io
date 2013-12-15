@@ -3,7 +3,9 @@
 A client implementation for Orchestrate.io in Node.js
 
 ### Setup
+Require `orchestrate.io` and create a new object with your `api_key`:
 
+```
 io = require('orchestrate.io')
 miao = new io({
   api_key: 'Your-API-key'
@@ -11,6 +13,7 @@ miao = new io({
 
 var json_data = '{"Director": "Hayao Miyazaki"}'
 var query_string = 'Genre:myth'
+```
 
 ### Key/Value
 
