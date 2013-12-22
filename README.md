@@ -7,10 +7,23 @@ Require `orchestrate.io` and create a new object with your `api_key`:
 
 ```
 io = require('orchestrate.io')
-miao = new io({
+miao = io.creatClient({
   api_key: 'Your-API-key'
 });
+```
 
+Or
+
+```
+$ export ORCHESTRATE_IO_API_KEY=Your-API-key
+$ node
+> io = require('orchestrate.io')
+> miao = io.createClient;
+```
+
+And
+
+```
 var json_data = '{"Director": "Hayao Miyazaki"}'
 var query_string = 'Genre:myth'
 ```
