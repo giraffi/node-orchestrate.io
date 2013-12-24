@@ -49,8 +49,8 @@ miao
   .putKeyValue({
     version: 'v0',
     collection: 'films',
-    key: 'princess_mononoke'
-    data: json_data,
+    key: 'princess_mononoke',
+    data: json_data
   },
   function(err, data) {
     console.log(data);
