@@ -17,17 +17,18 @@
     "url": "https://github.com/giraffi/node-orchestrate.io/issues"
   },
   "scripts": {
-    "test": "make test-all"
+    "test": "make test"
   },
   "dependencies": {
     "request": "~2.30.0"
   },
   "devDependencies": {
     "mocha": "*",
-    "expect": "*"
+    "chai": "*",
+    "sinon": "*"
   },
   "engines": {
-    "node": ">= 0.8.0"
+    "node": "0.8.x || 0.10.x"
   },
   "main": "index.js"
 }
