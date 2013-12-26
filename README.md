@@ -1,7 +1,7 @@
 # node-orchestrate.io
 
+[![Build Status](https://travis-ci.org/giraffi/node-orchestrate.io.png?branch=master)](https://travis-ci.org/giraffi/node-orchestrate.io)  
 A client implementation for Orchestrate.io in Node.js  
-[![Build Status](https://travis-ci.org/giraffi/node-orchestrate.io.png?branch=master)](https://travis-ci.org/giraffi/node-orchestrate.io)
 
 ## Setup
 Require `orchestrate.io` and create a new object with your `api_key`:
