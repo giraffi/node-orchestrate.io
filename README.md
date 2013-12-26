@@ -1,8 +1,8 @@
-## node-orchestrate.io
+# node-orchestrate.io
 
 A client implementation for Orchestrate.io in Node.js
 
-### Setup
+## Setup
 Require `orchestrate.io` and create a new object with your `api_key`:
 
 ```
@@ -28,11 +28,12 @@ var data = { "Title": "Rashomon" }
 var queryString = 'Genre:myth'
 ```
 
-### Usage
+## Usage
 
-#### Key/Value
+### Key/Value
 
-##### Get
+#### Get
+
 ```
 miao
   .getKeyValue({
@@ -44,7 +45,8 @@ miao
   });
 ```
 
-##### Put
+#### Put
+
 ```
 miao
   .putKeyValue({
@@ -57,7 +59,7 @@ miao
   });
 ```
 
-#### Search
+### Search
 
 ```
 miao
@@ -70,9 +72,10 @@ miao
   });
 ```
 
-#### Events
+### Events
 
-##### Get
+#### Get
+
 ```
 miao
   .getEvent({
@@ -87,7 +90,8 @@ miao
   });
 ```
 
-##### Put
+#### Put
+
 ```
 miao
   .putEvent({
@@ -102,9 +106,10 @@ miao
   });
 ```
 
-#### Graph
+### Graph
 
-##### Get
+#### Get
+
 ```
 miao
   .getGraph({
@@ -117,7 +122,8 @@ miao
   });
 ```
 
-##### Put
+#### Put
+
 ```
 miao
   .putGraph({
