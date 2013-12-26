@@ -1,11 +1,10 @@
-var nock = require('nock')
-  , io = require('../index');
+/*
+ * helper.js
+ *   
+ */
 
+var io = require('../index');
 var helper = exports;
-
-//
-// Define the default options
-//
 var default_options = helper.default_options = {
   endpoint: 'https://api.orchestrate.io',
   api: 'v0'
