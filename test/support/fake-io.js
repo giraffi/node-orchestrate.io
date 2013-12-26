@@ -73,6 +73,39 @@ FakeIo.prototype.event = function (options) {
 };
 
 FakeIo.prototype.graph = function (options) {
-  // write fake request & response
-  console.log('call FakeIo.graph with ' + options);
+  var server
+    , uri;
+
+  switch (options.method) {
+    case "GET":
+      uri = '/' + [
+        this.defaults.api,
+        options.collection,
+        options.key,
+        options.relation 
+      ].join('/');
+
+      server = nock(this.defaults.endpoint)
+        .get(uri)
+        .replyWithFile(200, __dirname + '/fixtures/graph-sample.json');
+      break;
+    case "PUT":
+      uri = '/' + [
+        this.defaults.api,
+        options.collection,
+        options.key,
+       'relation',
+        options.relation,
+        options.toCollection,
+        options.toKey
+  　  ].join('/');
+
+      server = nock(this.defaults.endpoint)
+        .put(uri).reply(204, {});
+      break;
+    default:
+      throw new Error('Inappropriate method');
+  }
+
+  return server;
 };
