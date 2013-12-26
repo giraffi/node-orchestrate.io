@@ -1,0 +1,15 @@
+{
+  "results": [
+    {
+      "path": {
+        "collection": "films",
+        "key": "princess_mononoke",
+        "ref": "790633952d404dc2"
+      },
+      "value": {
+        "Director": "Hayao Miyazaki"
+      }
+    }
+  ],
+  "count": 1
+}
