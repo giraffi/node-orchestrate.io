@@ -17,7 +17,7 @@ FakeIo.prototype.keyValue = function (options) {
   if (options.method == 'GET') {
     server = nock(this.defaults.endpoint)
       .get(uri)
-      .replyWithFile(200, __dirname + '/fixtures/sample.json');
+      .replyWithFile(200, __dirname + '/fixtures/key-value-sample.json');
   } else if (options.method == 'PUT') {
     server = nock(this.defaults.endpoint)
       .put(uri, options.data)
