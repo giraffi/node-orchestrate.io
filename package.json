@@ -1,6 +1,6 @@
 {
   "name": "orchestrate.io",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A client implementation for Orchestrate.io in Node.js",
   "author": "azukiwasher",
   "homepage": "https://github.com/giraffi/node-orchestrate.io",
@@ -28,7 +28,7 @@
     "nock": "*"
   },
   "engines": {
-    "node": "0.8.x || 0.10.x"
+    "node": "0.10.x"
   },
   "main": "index.js"
 }
