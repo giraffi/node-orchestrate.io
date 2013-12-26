@@ -25,7 +25,6 @@
   "devDependencies": {
     "mocha": "*",
     "chai": "*",
-    "sinon": "*",
     "nock": "*"
   },
   "engines": {
