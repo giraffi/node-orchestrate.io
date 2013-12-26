@@ -8,14 +8,14 @@ Require `orchestrate.io` and create a new object with your `api_key`:
 ```
 io = require('orchestrate.io')
 miao = io.creatClient({
-  api_key: 'Your-API-key'
+  apikey: 'Your-API-key'
 });
 ```
 
 Or
 
 ```
-$ export ORCHESTRATE_IO_API_KEY=Your-API-key
+$ export ORCHESTRATE_IO_APIKEY=Your-API-key
 $ node
 > io = require('orchestrate.io')
 > miao = io.createClient;
@@ -24,37 +24,88 @@ $ node
 And
 
 ```
-var json_data = '{"Director": "Hayao Miyazaki"}'
-var query_string = 'Genre:myth'
+var data = { "Title": "Rashomon" }
+var queryString = 'Genre:myth'
 ```
 
-### Key/Value
+### Usage
 
-#### Get
+#### Key/Value
+
+##### Get
 ```
 miao
   .getKeyValue({
-    version: 'v0',
     collection: 'films',
-    key: 'princess_mononoke'
+    key: 'kurosawa'
   },
-  function(err, data) {
+  function (err, data) {
     console.log(data);
   });
 ```
 
-#### Put
+##### Put
 ```
 miao
   .putKeyValue({
-    version: 'v0',
     collection: 'films',
-    key: 'princess_mononoke',
-    data: json_data
+    key: 'kurosawa',
+    data: data
   },
-  function(err, data) {
+  function (err, data) {
     console.log(data);
   });
 ```
 
-> under development ...
+#### Search
+
+```
+miao
+  .search({
+    collection: 'films',
+    query: 'Genre:crime'
+  },
+  function (err, data) {
+    console.log(data);
+  });
+```
+
+#### Events
+
+##### Get
+```
+miao
+  .getEvent({
+    collection: 'films',
+    key: 'kurosawa',
+    type: 'comments',
+    start: 1388051827,
+    end: 1388051845,
+  },
+  function (err, data) {
+    console.log(data);
+  });
+```
+
+##### Put
+```
+miao
+  .putEvent({
+    collection: 'films',
+    key: 'kurosawa',
+    type: 'comments',
+    data: { note: "Magnifique!" },
+    timestamp: 1388051845
+  },
+  function (err, data) {
+    console.log(data);
+  });
+```
+
+## Test
+
+Run `make test` to test all
+
+```bash
+$ make test
+```
