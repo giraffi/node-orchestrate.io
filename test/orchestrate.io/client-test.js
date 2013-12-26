@@ -133,7 +133,7 @@ describe('orchestrate.io/client', function () {
         });
       }
 
-      client = helper.io.createClient({apikey: 'abc'});
+      client = helper.io.createClient({ apikey: 'abc' });
       client.putEvent({
         collection: 'films',
         key: 'kurosawa',
@@ -142,6 +142,58 @@ describe('orchestrate.io/client', function () {
       }, function (err, data) {
         expect(err).to.be.null;
         expect(data).to.be.empty;
+        server && server.done();
+      });
+    });
+  });
+
+  describe('.getGraph', function () { 
+    it('performs GET Graph successfully', function () {
+      if (mock) {
+        server = helper.fakeIo.graph({
+          method: 'GET',
+          collection: 'films',
+          key: 'kurosawa',
+          relation: 'princess_mononoke'
+        });
+      }
+
+      client = helper.io.createClient({ apikey: 'abc' });
+      client.getGraph({
+        collection: 'films',
+        key: 'kurosawa',
+        relation: 'princess_mononoke'
+      }, function (err, data) {
+        expect(err).to.be.null;
+        expect(data.count).to.equal(1);
+        server && server.done();
+      });
+    });
+  });
+
+  describe('.putGraph', function () { 
+    it('performs PUT Graph successfully', function () {
+      if (mock) {
+        server = helper.fakeIo.graph({
+          method: 'PUT',
+          collection: 'films',
+          key: 'kurosawa',
+          relation: 'samurai',
+          toCollection: 'films',
+          toKey: 'princess_mononoke'
+        });
+      }
+
+      client = helper.io.createClient({ apikey: 'abc' });
+      client.putGraph({
+        collection: 'films',
+        key: 'kurosawa',
+        relation: 'samurai',
+        toCollection: 'films',
+        toKey: 'princess_mononoke'
+      }, function (err, data) {
+        expect(err).to.be.null;
+        expect(data.count).to.be.empty;
         server && server.done();
       });
     });
