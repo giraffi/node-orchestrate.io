@@ -98,7 +98,7 @@ FakeIo.prototype.graph = function (options) {
         options.relation,
         options.toCollection,
         options.toKey
-  　  ].join('/');
+      ].join('/');
 
       server = nock(this.defaults.endpoint)
         .put(uri).reply(204, {});
