@@ -102,6 +102,36 @@ miao
   });
 ```
 
+#### Graph
+
+##### Get
+```
+miao
+  .getGraph({
+    collection: 'films',
+    key: 'kurosawa',
+    relation: 'princess_mononoke',
+  },
+  function (err, data) {
+    console.log(data);
+  });
+```
+
+##### Put
+```
+miao
+  .putGraph({
+    collection: 'films',
+    key: 'kurosawa',
+    relation: 'samurai',
+    toCollection: 'films',
+    toKey: 'preincess_mononoke'
+  },
+  function (err, data) {
+    console.log(data);
+  });
+```
+
 ## Test
 
 Run `make test` to test all
