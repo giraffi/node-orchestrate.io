@@ -25,10 +25,17 @@
   "devDependencies": {
     "mocha": "*",
     "chai": "*",
-    "nock": "*"
+    "nock": "*",
+    "blanket": "*"
   },
   "engines": {
     "node": "0.10.x"
+  },
+  "config": {
+    "blanket": {
+      "pattern": "lib",
+      "data-cover-never": "node_modules"
+    }
   },
   "main": "index.js"
 }
