@@ -37,6 +37,7 @@ var queryString = 'Genre:myth'
 ### Key/Value
 
 #### Get
+Gets the latest value assigned to a key.
 
 ```
 miao
@@ -50,6 +51,7 @@ miao
 ```
 
 #### Put
+Creates or updates the value at the collection/key specified.
 
 ```
 miao
@@ -64,6 +66,7 @@ miao
 ```
 
 ### Search
+Returns list of items matching the lucene query.
 
 ```
 miao
@@ -79,6 +82,7 @@ miao
 ### Events
 
 #### Get
+Returns a list of events, optionally limited to specified time range in reverse chronological order.
 
 ```
 miao
@@ -95,6 +99,7 @@ miao
 ```
 
 #### Put
+Puts an event with an optional user defined timestamp.
 
 ```
 miao
@@ -113,6 +118,7 @@ miao
 ### Graph
 
 #### Get
+Returns relation’s collection, key, ref, and values.
 
 ```
 miao
@@ -127,6 +133,7 @@ miao
 ```
 
 #### Put
+Creates a relationship between two objects. Relations can span collections.
 
 ```
 miao
@@ -144,7 +151,7 @@ miao
 
 ## Test
 
-Run `make test` to test all
+Run `npm test` or `make test` to test all.
 
 ```bash
 $ make test
