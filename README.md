@@ -1,6 +1,8 @@
 # node-orchestrate.io
 
-[![Build Status](https://travis-ci.org/giraffi/node-orchestrate.io.png?branch=master)](https://travis-ci.org/giraffi/node-orchestrate.io)  
+[![Build Status](https://travis-ci.org/giraffi/node-orchestrate.io.png?branch=master)](https://travis-ci.org/giraffi/node-orchestrate.io)
+[![NPM version](https://badge.fury.io/js/orchestrate.io.png)](http://badge.fury.io/js/orchestrate.io)  
+
 A client implementation for Orchestrate.io in Node.js  
 
 ## Setup
