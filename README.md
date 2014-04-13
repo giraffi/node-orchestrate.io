@@ -11,7 +11,7 @@ Require `orchestrate.io` and create a new object with your `api_key`:
 
 ```
 io = require('orchestrate.io')
-miao = io.creatClient({
+miao = io.createClient({
   apikey: 'Your-API-key'
 });
 ```
